@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="506.0" prefWidth="377.0" style="-fx-background-color: #dfbdbd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <Accordion />
+      <Label layoutX="99.0" layoutY="25.0" prefHeight="27.0" prefWidth="204.0" text="Polynomial Calculator" textFill="#790c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="113.0" prefHeight="27.0" prefWidth="130.0" text="First polynomial=" textFill="#790c0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="146.0" prefHeight="27.0" prefWidth="130.0" text="Second polynomial=" textFill="#790c0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button id="buttonAddition" fx:id="buttonAddition" layoutX="44.0" layoutY="229.0" mnemonicParsing="false" onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Add" textFill="#790c0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="buttonClear" fx:id="buttonClear" layoutX="167.0" layoutY="445.0" mnemonicParsing="false" onAction="#clearTextFields" text="Clear" textFill="#7f0f0f" />
+      <Button id="buttonMultiplication" fx:id="buttonMultiplication" layoutX="44.0" layoutY="300.0" mnemonicParsing="false" onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Multiply" textFill="#790c0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="buttonDerivation" fx:id="buttonDerivation" layoutX="44.0" layoutY="367.0" mnemonicParsing="false" onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Differentiate" textFill="#790c0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="buttonIntegration" fx:id="buttonIntegration" layoutX="195.0" layoutY="367.0" mnemonicParsing="false"  onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Integrate" textFill="#790c0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="buttonDivision" fx:id="buttonDivision" layoutX="195.0" layoutY="300.0" mnemonicParsing="false" onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Divide" textFill="#790c0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="buttonSubtraction" fx:id="buttonSubtraction" layoutX="195.0" layoutY="229.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="142.0" text="Subtract" textFill="#790c0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField id="tfFirstPolynomial" fx:id="tfFirstPolynomial" layoutX="168.0" layoutY="114.0" prefHeight="26.0" prefWidth="195.0" />
+      <TextField id="tfSecondPolynomial" fx:id="tfSecondPolynomial" layoutX="168.0" layoutY="147.0" prefHeight="26.0" prefWidth="195.0" />
+      <Label layoutX="50.0" layoutY="193.0" prefHeight="27.0" prefWidth="130.0" text="Result=" textFill="#790c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="204.0" prefHeight="16.0" prefWidth="86.0" textFill="#790c0c">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField id="tfResult" fx:id="tfResult" layoutX="124.0" layoutY="191.0" prefHeight="26.0" prefWidth="237.0" />
+   </children>
+</AnchorPane>
