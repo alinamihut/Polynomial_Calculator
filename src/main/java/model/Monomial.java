@@ -1,10 +1,10 @@
 package model;
 
-public class Monom {
+public class Monomial {
     private int power;
     private double coefficient;
 
-    public Monom(int power, double coefficient) {
+    public Monomial(int power, double coefficient) {
         this.power = power;
         this.coefficient = coefficient;
     }

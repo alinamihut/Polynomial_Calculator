@@ -22,33 +22,33 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button id="buttonAddition" fx:id="buttonAddition" layoutX="44.0" layoutY="229.0" mnemonicParsing="false" onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Add" textFill="#790c0c">
+      <Button id="buttonAddition" fx:id="buttonAddition" layoutX="44.0" layoutY="229.0" mnemonicParsing="false" onAction="#addition" prefHeight="59.0" prefWidth="142.0" text="Add" textFill="#790c0c">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
       <Button id="buttonClear" fx:id="buttonClear" layoutX="167.0" layoutY="445.0" mnemonicParsing="false" onAction="#clearTextFields" text="Clear" textFill="#7f0f0f" />
-      <Button id="buttonMultiplication" fx:id="buttonMultiplication" layoutX="44.0" layoutY="300.0" mnemonicParsing="false" onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Multiply" textFill="#790c0c">
+      <Button id="buttonMultiplication" fx:id="buttonMultiplication" layoutX="44.0" layoutY="300.0" mnemonicParsing="false" onAction="#createPolynomials"  prefHeight="59.0" prefWidth="142.0" text="Multiply" textFill="#790c0c">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button id="buttonDerivation" fx:id="buttonDerivation" layoutX="44.0" layoutY="367.0" mnemonicParsing="false" onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Differentiate" textFill="#790c0c">
+      <Button id="buttonDerivation" fx:id="buttonDerivation" layoutX="44.0" layoutY="367.0" mnemonicParsing="false" onAction="#derivation"  prefHeight="59.0" prefWidth="142.0" text="Differentiate" textFill="#790c0c">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button id="buttonIntegration" fx:id="buttonIntegration" layoutX="195.0" layoutY="367.0" mnemonicParsing="false"  onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Integrate" textFill="#790c0c">
+      <Button id="buttonIntegration" fx:id="buttonIntegration" layoutX="195.0" layoutY="367.0" mnemonicParsing="false"  onAction="#integration"  prefHeight="59.0" prefWidth="142.0" text="Integrate" textFill="#790c0c">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button id="buttonDivision" fx:id="buttonDivision" layoutX="195.0" layoutY="300.0" mnemonicParsing="false" onAction="#parseBothStrings" prefHeight="59.0" prefWidth="142.0" text="Divide" textFill="#790c0c">
+      <Button id="buttonDivision" fx:id="buttonDivision" layoutX="195.0" layoutY="300.0" mnemonicParsing="false" onAction="#createPolynomials"  prefHeight="59.0" prefWidth="142.0" text="Divide" textFill="#790c0c">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button id="buttonSubtraction" fx:id="buttonSubtraction" layoutX="195.0" layoutY="229.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="142.0" text="Subtract" textFill="#790c0c">
+      <Button id="buttonSubtraction" fx:id="buttonSubtraction" layoutX="195.0" layoutY="229.0" mnemonicParsing="false"  onAction="#subtraction"  prefHeight="59.0" prefWidth="142.0" text="Subtract" textFill="#790c0c">
          <font>
             <Font size="14.0" />
          </font>
