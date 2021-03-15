@@ -60,7 +60,7 @@ public class Operations {
         }
         resultPolynomial.sortDegrees();
         resultPolynomial.getPolynomial().remove(resultPolynomial.getPolynomial().size()-1);
-       // resultPolynomial.getPolynomial().removeIf(monom -> monom.getCoefficient() == 0);
+        resultPolynomial.getPolynomial().removeIf(monom -> monom.getCoefficient() == 0);
         return resultPolynomial;
     }
 
@@ -75,9 +75,46 @@ public class Operations {
             Monomial newMonomial = new Monomial(oldPower +1,  oldCoeff/(oldPower+1));
             resultPolynomial.getPolynomial().add(newMonomial);
         }
-        //resultPolynomial.getPolynomial().removeIf(monom -> monom.getCoefficient() == 0);
+        resultPolynomial.getPolynomial().removeIf(monom -> monom.getCoefficient() == 0);
         resultPolynomial.sortDegrees();
-
         return resultPolynomial;
     }
+
+    public static Polynomial multiplyPolynomials(Polynomial polynomial1, Polynomial polynomial2){
+        Polynomial resultPolynomial = new Polynomial();
+        double newCoefficient, oldCoefficient, coefficient1, coefficient2;
+        int newPower, power1, power2;
+        for (Monomial monom1 : polynomial1.getPolynomial()){
+            for (Monomial monom2 : polynomial2.getPolynomial()){
+                power1= monom1.getPower();
+                power2=monom2.getPower();
+                coefficient1= monom1.getCoefficient();
+                coefficient2= monom2.getCoefficient();
+
+                newPower=power1+power2;
+                newCoefficient=coefficient1*coefficient2;
+                if (resultPolynomial.findMonomialInPolynom(resultPolynomial, newPower)!=null){
+                    oldCoefficient=resultPolynomial.findMonomialInPolynom(resultPolynomial, newPower).getCoefficient();
+                    resultPolynomial.findMonomialInPolynom(resultPolynomial, newPower).setCoefficient(oldCoefficient+newCoefficient);
+                }
+                else{
+                    Monomial newMonomial = new Monomial(newPower,newCoefficient);
+                    resultPolynomial.getPolynomial().add(newMonomial);
+                }
+            }
+        }
+        resultPolynomial.getPolynomial().removeIf(monom -> monom.getCoefficient() == 0);
+        resultPolynomial.sortDegrees();
+        return resultPolynomial;
+    }
+
+            /*
+    public static Polynomial dividePolynomials(Polynomial polynomial1, Polynomial polynomial2){
+        Polynomial quotient = new Polynomial();
+        Polynomial remainder = new Polynomial();
+        Polynomial[] resultPolynomial= new Polynomial[2];
+
+    }
+            */
+
 }

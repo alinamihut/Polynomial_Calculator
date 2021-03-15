@@ -4,35 +4,43 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
-public class UserInterface extends Application {
-
+public class UserInterface  extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
         URL url= new File("src/main/java/view/sample.fxml").toURI().toURL();
-        Parent root=FXMLLoader.load(url);
+        Parent root= FXMLLoader.load(url);
         primaryStage.setTitle("Polynomial Calculator");
-        primaryStage.setScene(new Scene (root, 380, 500));
+        primaryStage.setScene(new Scene(root, 380, 500));
         primaryStage.show();
     }
-        /*
-        String javaVersion = System.getProperty("java.version");
-        String javafxVersion = System.getProperty("javafx.version");
-        Label l = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        Scene scene = new Scene(new StackPane(l), 640, 480);
-        stage.setScene(scene);
-        stage.show();
-
-         */
-
     public static void main(String[] args) {
         launch();
+    }
+        public static void handleButtonAction() {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Message");
+            alert.setHeaderText("Please enter a valid polynomial!");
+            alert.show();
+        }
+    public static void showAlertForEmptyTextfields() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Message");
+        alert.setHeaderText("For the following operation, you need to enter two polynomials!");
+        alert.show();
+    }
+    public static void showAlertForTextField1() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Message");
+        alert.setHeaderText("Please enter a polynomial in the first text field!");
+        alert.show();
     }
 
 }
