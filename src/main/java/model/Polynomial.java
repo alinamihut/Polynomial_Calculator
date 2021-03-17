@@ -24,7 +24,6 @@ public class Polynomial {
         Collections.sort(polynomial, monomialComparator);
     }
 
-
     public Monomial findMonomialInPolynom(Polynomial p, int power) {
         for (Monomial mon : p.getPolynomial()) {
             if (mon.getPower() == power) {
@@ -33,6 +32,7 @@ public class Polynomial {
         }
         return null;
     }
+
     public String getPolynomialStringWithIntegers(Polynomial p) {
         StringBuilder polynomString = new StringBuilder();
         for (Monomial mon : p.getPolynomial()) {
@@ -103,15 +103,15 @@ public class Polynomial {
             if (mon.getCoefficient() < 0) {
                 if ((mon.getCoefficient() != -1)) {
                     if (mon.getPower() == 1) {
-                        polynomString.append("+").append(String.format("%.2f", mon.getCoefficient())).append("x");
+                        polynomString.append(String.format("%.2f", mon.getCoefficient())).append("x");
                     } else if (mon.getPower() == 0) {
-                        polynomString.append("+").append(String.format("%.2f", mon.getCoefficient()));
+                        polynomString.append(String.format("%.2f", mon.getCoefficient()));
                     } else {
-                        polynomString.append("+").append(String.format("%.2f", mon.getCoefficient())).append("x^").append(mon.getPower());
+                        polynomString.append(String.format("%.2f", mon.getCoefficient())).append("x^").append(mon.getPower());
                     }
                 } else {
                     if (mon.getPower() == 1) {
-                        polynomString.append("-").append("x)");
+                        polynomString.append("-").append("x");
                     } else if (mon.getPower() == 0) {
                         polynomString.append("-").append("1");
                     } else {

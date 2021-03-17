@@ -108,13 +108,50 @@ public class Operations {
         return resultPolynomial;
     }
 
-            /*
-    public static Polynomial dividePolynomials(Polynomial polynomial1, Polynomial polynomial2){
+
+    public static Polynomial[] dividePolynomials(Polynomial polynomial1, Polynomial polynomial2){
         Polynomial quotient = new Polynomial();
         Polynomial remainder = new Polynomial();
         Polynomial[] resultPolynomial= new Polynomial[2];
 
-    }
-            */
+        polynomial1.sortDegrees();
+        polynomial2.sortDegrees();
 
+        Monomial greatestMonomP2=polynomial2.getPolynomial().get(0);
+        Monomial greatestMonomRemainder=polynomial1.getPolynomial().get(0);
+        int greatestPowerRemainder=polynomial1.getPolynomial().get(0).getPower();
+        int greatestPowerDivider=polynomial2.getPolynomial().get(0).getPower();
+        double quotientCoefficient;
+        int quotientPower;
+        remainder=polynomial1;
+        if (greatestPowerRemainder<greatestPowerDivider){
+            return null;
+        }
+        if (polynomial1.equals(polynomial2)){
+            Monomial monomial=new Monomial(0,1);
+            quotient.getPolynomial().add(monomial);
+            monomial=new Monomial(0,0);
+            remainder.getPolynomial().add(monomial);
+            resultPolynomial[0]=quotient;
+            resultPolynomial[1]=remainder;
+            return resultPolynomial;
+        }
+        while (greatestPowerRemainder>=greatestPowerDivider) {
+            quotientCoefficient = greatestMonomRemainder.getCoefficient() / greatestMonomP2.getCoefficient();
+            quotientPower = greatestMonomRemainder.getPower() - greatestMonomP2.getPower();
+
+            Monomial newMonomial = new Monomial(quotientPower, quotientCoefficient);
+            quotient.getPolynomial().add(newMonomial);
+            Polynomial mon=new Polynomial();
+            mon.getPolynomial().add(newMonomial);
+            Polynomial product = multiplyPolynomials(mon, polynomial2);
+            remainder = subtractPoynomials(remainder, product);
+            remainder.sortDegrees();
+            greatestMonomRemainder = remainder.getPolynomial().get(0);
+            greatestPowerRemainder=greatestMonomRemainder.getPower();
+        }
+        resultPolynomial[0]=quotient;
+        resultPolynomial[1]=remainder;
+        return resultPolynomial;
+    }
 }

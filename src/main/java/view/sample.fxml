@@ -43,7 +43,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button id="buttonDivision" fx:id="buttonDivision" layoutX="195.0" layoutY="300.0" mnemonicParsing="false" onAction="#createPolynomials"  prefHeight="59.0" prefWidth="142.0" text="Divide" textFill="#790c0c">
+      <Button id="buttonDivision" fx:id="buttonDivision" layoutX="195.0" layoutY="300.0" mnemonicParsing="false" onAction="#division"  prefHeight="59.0" prefWidth="142.0" text="Divide" textFill="#790c0c">
          <font>
             <Font size="14.0" />
          </font>

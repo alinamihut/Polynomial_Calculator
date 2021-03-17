@@ -42,5 +42,10 @@ public class UserInterface  extends Application {
         alert.setHeaderText("Please enter a polynomial in the first text field!");
         alert.show();
     }
-
+    public static void showAlertForDivision() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Message");
+        alert.setHeaderText("Division can't be performed because degree (polynomial 1) < degree (polynomial 2)!");
+        alert.show();
+    }
 }
