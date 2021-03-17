@@ -48,4 +48,5 @@ public class UserInterface  extends Application {
         alert.setHeaderText("Division can't be performed because degree (polynomial 1) < degree (polynomial 2)!");
         alert.show();
     }
+
 }

@@ -36,11 +36,7 @@ public class Controller  {
         userInterface = new UserInterface();
        new Thread(() ->Application.launch(UserInterface.class)).start();
     }
-    public void clearTextFields(javafx.event.ActionEvent actionEvent) {
-        tfFirstPolynomial.clear();
-        tfSecondPolynomial.clear();
-        tfResult.clear();
-    }
+
     public Polynomial parsePolynomString(TextField textField) {
         Polynomial polynomial = new Polynomial();
         String polynomString = textField.getText();
@@ -165,6 +161,11 @@ public class Controller  {
                 String resultString = "Quotient: " + quotientString+ " Remainder:"+ remainderString;
                 displayResultToTextField(resultString);
             }
+    }
+    public void clearTextFields(javafx.event.ActionEvent actionEvent) {
+        tfFirstPolynomial.clear();
+        tfSecondPolynomial.clear();
+        tfResult.clear();
     }
 
 }

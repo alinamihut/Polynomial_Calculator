@@ -89,6 +89,7 @@ public class OperationsTest {
 
         assertTrue("The result of the multiplication operation should be +12x^4+2x^3-4x^2+4x-2", resultString.equals("+12x^4+2x^3-4x^2+4x-2"));
     }
+    @Test
     public void divisionTest() {
         Monomial m1 = new Monomial(3, 3);
         Monomial m2 = new Monomial(2, 2);
